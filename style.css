@@ -1,0 +1,72 @@
+.databody{
+    color: black;
+}
+
+ul{
+    position: relative;
+    top: 0;
+}
+
+li{
+    position: relative;
+    top: 5;
+}
+
+#navlink{
+    color: purple
+}
+
+table{
+    text-align: center;
+}
+
+#drop{
+    color: black;
+    background-color: #F9E79F;
+    border-color: #F9E79F;
+}
+
+.title{
+    text-align: center;
+    color: black;
+}
+
+footer{
+    text-align: center;
+}
+
+#compare{
+    text-align: center;
+}
+
+p{
+    color: darkslategray;
+}
+
+.dropdown{
+    position: relative;
+    left: 10%;
+    z-index: 1;
+}
+h2{
+    color: purple
+}
+
+h3{
+    color: black;
+}
+
+#visuals p{
+    color:#20c997;
+    text-align:center;
+}
+
+.VZ{
+    text-align: center;
+}
+
+figcaption{
+    position: relative;
+    left: 22%;
+    font-size: 0.6em;
+}
