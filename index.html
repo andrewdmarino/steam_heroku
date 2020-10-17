@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- Page Title -->
     <title>Latitude Home</title>
@@ -83,19 +84,47 @@
             <div class="col-md-8">
                 <div class="expand">
                 <br>
-                <h3>Welcome to the Latitude Analysis Web Visualization Dashboard!</h3><br>
+                <script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #bcbddc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
+</head>
+<body>
+ 
+			<div id="flip">Welcome to the Latitude Analysis Web Visualization Dashboard!<Welcome to the Latitude Analysis Web Visualization Dashboard!/div>
+				<div id="panel"> <p> The purpose of this project was to analyze how weather changes in respect to latitude position on the globe especially approaching the equator. To accomplish this analysis, data was pulled from the OpenWeatherMap API to create a dataset of over 500 random cities across the world at varying distance from the equaor. Matplotlib was then used to plot various aspects of weather vs. latitude. Factors of analysis included: temperature, cloudiness, wind-speed and humidity. </p> 
+                <p> This site provides the source data and visualizations created as part of this analysis, as well as explanations and descriptions of any trends and correlations witnessed. There are individual pages for each plot containing the analysis of what was found along with a comparison page showing all four plots together for better visualization of the entire project. </p>
+                <p> Data Diclaimer: This dataset is only representative of between 500-600 randomized cities around the globe on one specific date (1-5-2017). Further study over a larger time period would be needed for deeper analysis of how weather affects change over time. This analysis assumes this is a representative dataset for any given day of global weather. </p>
+</div>
+
+</body>
+</html>
+                <h3></h3><br>
                     <div class="pull-left">
                         <figure>
                         <img width="900" height="400" src="Resources/Assets-Images/earthimage.jpg" class="img-fluid" alt="Earth"/>
-                        <figcaption><em>Image Source:https://en.wikipedia.org/wiki/File:Robinson_projection_SW.jpg</em></figcaption>
+                        <figcaption><em>Image Source:https://www.jesuitroundup.org/wp-content/uploads/2020/04/2NI3ACSRWBHFVDDHRDKDQDVMEA.j<pg/em></figcaption>
                         </figure>   
                     </div>
                 <div class="text-left">
                     <br>
-                    <p> The purpose of this project was to analyze how weather changes in respect to latitude position on the globe especially approaching the equator. To accomplish this analysis, data was pulled from the OpenWeatherMap API to create a dataset of over 500 random cities across the world at varying distance from the equaor. Matplotlib was then used to plot various aspects of weather vs. latitude. Factors of analysis included: temperature, cloudiness, wind-speed and humidity. </p> 
-                    <p> This site provides the source data and visualizations created as part of this analysis, as well as explanations and descriptions of any trends and correlations witnessed. There are individual pages for each plot containing the analysis of what was found along with a comparison page showing all four plots together for better visualization of the entire project. </p>
-                    <p> Data Diclaimer: This dataset is only representative of between 500-600 randomized cities around the globe on one specific date (1-5-2017). Further study over a larger time period would be needed for deeper analysis of how weather affects change over time. This analysis assumes this is a representative dataset for any given day of global weather. </p>
-                </div>
+                                   </div>
                 </div>
             </div>
     
