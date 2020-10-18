@@ -13,17 +13,11 @@ li{
 }
 
 #navlink{
-    color: purple
+    color: lime
 }
 
 table{
     text-align: center;
-}
-
-#drop{
-    color: black;
-    background-color: #F9E79F;
-    border-color: #F9E79F;
 }
 
 .title{
@@ -33,6 +27,7 @@ table{
 
 footer{
     text-align: center;
+    color: white
 }
 
 #compare{
@@ -69,4 +64,12 @@ figcaption{
     position: relative;
     left: 22%;
     font-size: 0.6em;
+}
+
+#nav-text{
+    position: right;
+}
+
+#flip{
+    color: lime
 }

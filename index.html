@@ -20,10 +20,10 @@
     <title>Steam Data Dashboard</title>
 
 <!-- Create the navigation bar at the top -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <strong><a class="navbar-brand " href="index.html">Steam Data <i class='fab fa-steam' style='font-size:24px;color:white'></i> Home</a></strong>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="navibar" style='background-color:black !important'>
+        <strong><a class="navbar-brand" href="index.html">Steam Data <i class='fab fa-steam' style='font-size:24px;color:white'></i> Home</a></strong>
             <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"></button>
-        <div class="navbar navbar-collapse" id="navbarColor01">
+        <div class="navbar navbar-collapse">
             <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" id="navlink" href="comparison.html">
@@ -53,6 +53,7 @@
                     </li>
             </ul>
         </div>
+        <a class="nav-text">Steam Data Analysis Web Visualization Dashboard</a>
     </nav>
 </head>
 
@@ -84,29 +85,22 @@ $(document).ready(function(){
 </style>
 </head>
 <body>
- 
-			<div id="flip">Welcome to the Steam Data Analysis Web Visualization Dashboard!<Welcome to the Latitude Analysis Web Visualization Dashboard!/div>
-				<div id="panel"> <p> The purpose of this project was to analyze how weather changes in respect to latitude position on the globe especially approaching the equator. To accomplish this analysis, data was pulled from the OpenWeatherMap API to create a dataset of over 500 random cities across the world at varying distance from the equaor. Matplotlib was then used to plot various aspects of weather vs. latitude. Factors of analysis included: temperature, cloudiness, wind-speed and humidity. </p> 
-                <p> This site provides the source data and visualizations created as part of this analysis, as well as explanations and descriptions of any trends and correlations witnessed. There are individual pages for each plot containing the analysis of what was found along with a comparison page showing all four plots together for better visualization of the entire project. </p>
-                <p> Data Diclaimer: This dataset is only representative of between 500-600 randomized cities around the globe on one specific date (1-5-2017). Further study over a larger time period would be needed for deeper analysis of how weather affects change over time. This analysis assumes this is a representative dataset for any given day of global weather. </p>
-</div>
-
-</body>
-</html>
-                <h3></h3><br>
-                    <div class="pull-left">
-                        <figure>
-                        <img width="900" height="400" src="https://cdn.worldvectorlogo.com/logos/steam.svg" class="img-fluid" alt="SteamLogo"/>
-                        </figure>   
-                    </div>
-                <div class="text-left">
-                    <br>
-                                   </div>
-                </div>
-            </div>
+	<div id="flip" style="background-color:#145385">Welcome to the Steam Data Analysis Web Visualization Dashboard!<br>Click below for site information<Welcome to the Latitude Analysis Web Visualization Dashboard!/div>
+		<div id="panel"> <p> The purpose of this project was to retrieve and visualize a data set. To accomplish this data was pulled from ... to create two datasets of both US data and worldwide data. Steam is a cloud-based gaming library that allows users the ability to use any computer to access their content. </p> 
+        <p> This site provides the source data and visualizations created, as well as explanations and descriptions of any trends witnessed. This site contains user-driven interactions and interactive plots. </p>
         </div>
-    </div>
+        <h3></h3><br>
+        <div class="pull-left">
+                <figure>
+                <img width="900" height="400" src="https://cdn.worldvectorlogo.com/logos/steam.svg" class="img-fluid" alt="SteamLogo"/>
+                </figure>   
+        </div>
+        <div class="text-left">
+                    <br>
+        </div>
+
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src='chart.js'></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 
@@ -116,5 +110,4 @@ $(document).ready(function(){
     <div class="footer">Copyright &copy; something... </div>
 </footer>
 
-</body>
 </html>
