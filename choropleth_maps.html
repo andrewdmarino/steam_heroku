@@ -63,47 +63,46 @@
             <div class="col-12 col-md-4 position-md-sticky d-flex align-items-center vh-md-100 mx-auto" style="top: 0;">
                 <!-- Text to side of plot -->
                 <aside class="flex-grow-1 py-8 py-md-10">  
-                    <h1 class="display-4" style="color: purple;">Humidity</h1>
+                    <h1 class="display-4" style="color: purple;">US Choropleth Map</h1>
                     <p class="font-size-lg mb-7 text-muted">
                     The main trend that we can observe appears to be that the majority of cities around the globe seem to exerience high humidity levels (> 60% Humidity). Most of the world's deserts are located between 20 to 40 degrees for both the north and south latitudes which can also be seen on this chart. The cities with the lowest humidities do appear to be roughly grouped around 20 to 40 degrees for both the north and south hemispheres. While this second observation is not a perfect correlation I do think its interesting that the lower humidity points do seem to be clustered in these areas give or take. Further study would be needed to confirm this trend throught the year. </p>  
                 </aside>  
             </div>
             <div class="col-12 col-md-7">
                 <section class="pt-md-10 my-5 mx-2">
-                <img src="Resources/Assets-Images/Fig2.png" class="img-fluid" alt="Humidity Plot Not Found">
+                    <div id='usmap'></div>
+                </section>  
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid px-md-0" style="background-color: #EDF2F4;">
+        <div class="row justify-content-between no-gutters mx-md-0" >
+            <div class="col-12 col-md-4 position-md-sticky d-flex align-items-center vh-md-100 mx-auto" style="top: 0;">
+                <!-- Text to side of plot -->
+                <aside class="flex-grow-1 py-8 py-md-10">  
+                    <h1 class="display-4" style="color: purple;">World Choropleth Map</h1>
+                    <p class="font-size-lg mb-7 text-muted">
+                    The main trend that we can observe appears to be that the majority of cities around the globe seem to exerience high humidity levels (> 60% Humidity). Most of the world's deserts are located between 20 to 40 degrees for both the north and south latitudes which can also be seen on this chart. The cities with the lowest humidities do appear to be roughly grouped around 20 to 40 degrees for both the north and south hemispheres. While this second observation is not a perfect correlation I do think its interesting that the lower humidity points do seem to be clustered in these areas give or take. Further study would be needed to confirm this trend throught the year. </p>  
+                </aside>  
+            </div>
+            <div class="col-12 col-md-7">
+                <section class="pt-md-10 my-5 mx-2">
+                <div id='worldmap'></div>
                 </section>  
             </div>
         </div>
     </div>
 
-    <!--Visualizations-->
-    <section class="text-white pb-4 pt-2 separator-bottom">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-10 text-center">
-                    <h2>View Another Plot</h2> 
-                </div>            
-                <div class="col-md-3 text-center">
-                    <h6 style="color: #20c997;">Cloudiness</h6>
-                    <a class= "a" href="cloudiness.html" title=""><img src="Resources/Assets-Images/Fig3.png" alt="Humid" style="height: 150; width: 100%;"></a>
-                </div>
-                <div class="col-md-3 text-center">
-                    <h6 style="color: #20c997;">Max temperature</h6>
-                    <a class= "a" href="maxtemp.html" title=""><img src="Resources/Assets-Images/Fig1.png" alt="Temp" style="height: 150; width: 100%;"></a>
-                </div>
-                <div class="col-md-3 text-center">
-                    <h6 style="color: #20c997;">Wind speed</h6>
-                    <a class= "a" href="windspeed.html" title=""><img src="Resources/Assets-Images/Fig4.png" alt="Wind" style="height: 150; width: 100%;"></a>
-                </div>            
-            </div>
-        </div>
-    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="maps.js"></script>
+
 </body>
 
 <!-- Footer -->
 <footer>
     <br>
-    <div class="footer">Copyright &copy; Sarah Zachrich </div>
+    <div class="footer">Copyright &copy; something... </div>
 </footer>
 
 </html>
