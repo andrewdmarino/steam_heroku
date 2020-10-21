@@ -10,14 +10,44 @@ engine=create_engine("sqlite:///assests/data/games.sqlite")
 app=Flask(__name__)
 CORS(app)
 
-@app.route("/data")
+@app.route("/")
 def home():
+    return(f"Steam data<br/>"
+           f"available routes:<br/>"
+           f"/api/v1.0/Number_of_Players_per_Country<br/>"
+           f"/api/v1.0/Number_of_Players_per_State<br/>"
+           f"/api/v1.0/Highest_rated_game<br/>"
+           )
+
+@app.route("/api/v1.0/Number_of_Players_per_Country")
+def Number_of_Players_per_Country():
     results=engine.execute('select * from country_sales').fetchall()
-    return_string=''
-    for each_row in list(results): 
-        for each_value in each_row: 
-            return_string=return_string+str(each_value)
-    return jsonify(return_string)
+    # return_string=''
+    # for each_row in list(results): 
+    #     for each_value in each_row: 
+    #         return_string=return_string+str(each_value)
+    returned_results=[list(result) for result in results]
+    return jsonify(returned_results)
+
+@app.route("/api/v1.0/Number_of_Players_per_State")
+def Number_of_Players_per_State():
+    state_results=engine.execute('select * from state_sales2').fetchall()
+    # return_string=''
+    # for each_row in list(results): 
+    #     for each_value in each_row: 
+    #         return_string=return_string+str(each_value)
+    returned_results_state=[list(state_result) for state_result in state_results]
+    return jsonify(returned_results_state)
+
+@app.route("/api/v1.0/Highest_rated_game")
+def Highest_rated_game():
+    steam_results=engine.execute('select * from steam_data').fetchall()
+    # return_string=''
+    # for each_row in list(results): 
+    #     for each_value in each_row: 
+    #         return_string=return_string+str(each_value)
+    returned_results_steam=[list(steam_result) for steam_result in steam_results]
+    return jsonify(returned_results_steam)
 
 if __name__=="__main__":
     app.run(debug=True)
